@@ -1,0 +1,17 @@
+x = {
+  "attribute_name": { "low":-10, 
+                      "high":5,
+                      "default":delete/(if not change, don't use this variance)/default,
+                      "unique":true/false,
+                      "in":5
+  },
+  "name_for_the_whole": { "low":-10, 
+                          "high":5,
+                          "default":delete/(if not change, don't use this variance)/default,
+                          "unique":columns' name,
+                          "primary_key":columns' name,
+                          "in":5,
+                          "sort_by":id,
+                          "combination": columns' name
+  }
+}
