@@ -4,10 +4,10 @@ Hello~Let's design.
 ## Purposes
 Given metadata, we should deal with following conditions:
 >For specific columns:
-. logical operator
-. Unique (or primary key)
-. Null (delete/ default/ null)
-. Included or not
+.logical operator
+.Unique (or primary key)
+.Null (delete/ default/ null)
+.Included or not
 >For the whole table: 
 . Sort by
 . Null (delete/ default/ null)
