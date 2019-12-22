@@ -1,0 +1,33 @@
+{
+  "//comment0" : "For the format of the metadata of your raw table.",
+  "//comment1" : "Use attributes name or 'ALL' as keys.",
+  "//comment2" : "The followings are available values and their use, type=object.",
+  "//comment3" : "We focus on one table first, i.e.input: a messy table, output: a clean table.",
+
+  "null" : {"dr" : "Delete rows contain null, type=str.",
+            "dc" : "Delete columns contain null, type=str.",
+            "rz" : "Replace null by zeros, type=str.",
+            "ra" : "Replace null by the average of the rest, type=str.",
+            "rn" : "Replace null by a random number follows the normal distribution, type=str.",
+            "rd" : "Replace null by rd, type=number."},
+
+  "str2float" : {"true" : "Convert string to float, type=true.",
+                 "false" : "do nothing, type=false."},
+  "int2float" : {"true" : "Convert integer to float, type=true.",
+                 "false" : "do nothing, type=false."},
+
+  "unique" : {},
+
+  "primary_key" : {},
+
+  "logic" : {},
+
+  "sortby" : {},
+
+  "cat" : {"attributes names" : "Concatenate them into one attribute, type=array."},
+
+  "trim" : {"attributes names" : "Keep them and drop the rest attributes, type=array"},
+
+
+
+}
