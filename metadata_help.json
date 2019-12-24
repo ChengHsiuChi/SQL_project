@@ -10,6 +10,7 @@
             "ra" : "Replace null by the average of the rest, type=str.",
             "rn" : "Replace null by a random number follows the normal distribution, type=str.",
             "rm" : "Replace null by the mode of the rest, type=str.",
+            "rs" : "Replace null by rs, type=str.",
             "rd" : "Replace null by rd, type=number."},
 
   "str2float" : {"true" : "Convert string to float, type=true.",
