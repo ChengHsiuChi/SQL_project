@@ -3,67 +3,72 @@
   "//comment1" : "We focus on one table first, i.e.input: a messy table, output: a clean table.",
   "//comment2" : "The .json file should contain two parts, for specific attributes & for the whole table, as shown below.",
 
-  "For specific attributes: ":{
+  "For specific attributes: " : {
 
-  "//comment3" : "Use attributes name as keys.",
-  "//comment4" : "The followings are available values and their use, type=object.",
+    "//comment3" : "Use attributes name as keys, and values type=object.",
+    "//comment4" : "The followings are available key-value pairs in values and their use",
 
-  "null" : {"dr" : "Delete rows contain null, type=str.",
-            "dc" : "Delete columns contain null, type=str.",
-            "rz" : "Replace null by zeros, type=str.",
-            "ra" : "Replace null by the average of the rest, type=str.",
-            "rn" : "Replace null by a random number follows the normal distribution, type=str.",
-            "rd" : "Replace null by rd, a number input by you, type=number.",
-            "rs" : "Replace null by rs, a string input by you, type=str."},
+    "attributes name" : {
 
-  "str2float" : {"true" : "Convert string to float, type=true.",
-                 "false" : "do nothing, type=false."},
-  "int2float" : {"true" : "Convert integer to float, type=true.",
-                 "false" : "do nothing, type=false."},
+      "null" : {"dr" : "Delete rows containing null, type=str.",
+                "dc" : "Delete this column if containing null, type=str.",
+                "rz" : "Replace null by zeros, type=str.",
+                "ra" : "Replace null by the average of the rest, type=str.",
+                "rn" : "Replace null by a random number follows the normal distribution, type=str.",
+                "rm" : "Replace null by the mode of the rest, type=str.",
+                "rd" : "Replace null by rd, an input number, type=number.",
+                "rs" : "Replace null by rs, an input string, type=str."},
 
-  "unique" : {},
+      "str2float" : {"true" : "Convert string to float, type=true.",
+                     "false" : "do nothing, type=false."},
+      "int2float" : {"true" : "Convert integer to float, type=true.",
+                     "false" : "do nothing, type=false."},
 
-  "primary_key" : {},
+      "unique" : {},
 
-  "logic" : {},
+      "primary_key" : {},
 
-  "include" : {},
+      "logic" : {},
+
+      "include" : {},
+
+    }
 
   },
 
   "For the whole table: " : {
 
-  "//comment5" : "The followings are available objects and their use, type=object.",
+    "//comment5" : "The followings are available key-value pairs and their use.",
 
-  "null" : {"dr" : "Delete rows contain null, type=str.",
-            "dc" : "Delete columns contain null, type=str.",
-            "rz" : "Replace null by zeros, type=str.",
-            "ra" : "Replace null by the average of the rest, type=str.",
-            "rn" : "Replace null by a random number follows the normal distribution, type=str.",
-            "rm" : "Replace null by the mode of the rest, type=str.",
-            "rs" : "Replace null by rs, type=str.",
-            "rd" : "Replace null by rd, type=number."},
+    "null" : {"dr" : "Delete rows contain null, type=str.",
+              "dc" : "Delete columns contain null, type=str.",
+              "rz" : "Replace null by zeros, type=str.",
+              "ra" : "Replace null by the average of the rest, type=str.",
+              "rn" : "Replace null by a random number follows the normal distribution, type=str.",
+              "rm" : "Replace null by the mode of the rest, type=str.",
+              "rd" : "Replace null by rd, an input number, type=number."},
+              "rs" : "Replace null by rs, an input string, type=str.",
 
-  "str2float" : {"true" : "Convert string to float, type=true.",
-                 "false" : "do nothing, type=false."},
-  "int2float" : {"true" : "Convert integer to float, type=true.",
-                 "false" : "do nothing, type=false."},
+    "str2float" : {"true" : "Convert string to float, type=true.",
+                   "false" : "do nothing, type=false."},
+    "int2float" : {"true" : "Convert integer to float, type=true.",
+                   "false" : "do nothing, type=false."},
 
-  "unique" : {},
+    "unique" : {},
 
-  "primary_key" : {},
+    "primary_key" : {},
 
-  "logic" : {},
+    "logic" : {},
 
-  "include" : {},
+    "include" : {},
 
-  "sortby" : {"[{'attributes name' : 'order'}]" : "Sort by the list of attributes with order='acs' or 'desc', type=array."},
+    "sortby" : {"[{'attributes name' : 'order'}]" : "Sort by the array of attributes with order='acs' or 'desc', type=array."},
 
-  "cat" : {"['attributes names']" : "Concatenate them into one attribute, type=array."},
+    "cat" : {"'new attribute name' : ['attributes names']" : "Concatenate the array of attriutes into one attribute and assign a new name, type=object."},
 
-  "trim" : {"['attributes names']" : "Keep them and drop the rest attributes, type=array"},
+    "trim" : {"['attributes names']" : "Keep them and drop the rest attributes, type=array."},
 
-  },
+  }
 
 
 
