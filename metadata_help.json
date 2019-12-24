@@ -1,8 +1,39 @@
 {
-  "//comment0" : "For the format of the metadata of your raw table.",
-  "//comment1" : "Use attributes name or 'ALL' as keys.",
-  "//comment2" : "The followings are available values and their use, type=object.",
-  "//comment3" : "We focus on one table first, i.e.input: a messy table, output: a clean table.",
+  "//comment0" : "This is the format of the metadata of your raw table.",
+  "//comment1" : "We focus on one table first, i.e.input: a messy table, output: a clean table.",
+  "//comment2" : "The .json file should contain two parts, for specific attributes & for the whole table, as shown below.",
+
+  "For specific attributes: ":{
+
+  "//comment3" : "Use attributes name as keys.",
+  "//comment4" : "The followings are available values and their use, type=object.",
+
+  "null" : {"dr" : "Delete rows contain null, type=str.",
+            "dc" : "Delete columns contain null, type=str.",
+            "rz" : "Replace null by zeros, type=str.",
+            "ra" : "Replace null by the average of the rest, type=str.",
+            "rn" : "Replace null by a random number follows the normal distribution, type=str.",
+            "rd" : "Replace null by rd, a number input by you, type=number.",
+            "rs" : "Replace null by rs, a string input by you, type=str."},
+
+  "str2float" : {"true" : "Convert string to float, type=true.",
+                 "false" : "do nothing, type=false."},
+  "int2float" : {"true" : "Convert integer to float, type=true.",
+                 "false" : "do nothing, type=false."},
+
+  "unique" : {},
+
+  "primary_key" : {},
+
+  "logic" : {},
+
+  "include" : {},
+
+  },
+
+  "For the whole table: " : {
+
+  "//comment5" : "The followings are available objects and their use, type=object.",
 
   "null" : {"dr" : "Delete rows contain null, type=str.",
             "dc" : "Delete columns contain null, type=str.",
@@ -22,11 +53,15 @@
 
   "logic" : {},
 
-  "sortby" : {},
+  "include" : {},
 
-  "cat" : {"attributes names" : "Concatenate them into one attribute, type=array."},
+  "sortby" : {"[{'attributes name' : 'order'}]" : "Sort by the list of attributes with order='acs' or 'desc', type=array."},
 
-  "trim" : {"attributes names" : "Keep them and drop the rest attributes, type=array"},
+  "cat" : {"['attributes names']" : "Concatenate them into one attribute, type=array."},
+
+  "trim" : {"['attributes names']" : "Keep them and drop the rest attributes, type=array"},
+
+  },
 
 
 
