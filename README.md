@@ -12,3 +12,4 @@ Given metadata, we should deal with following conditions:
     + default by the average
     + default by a number chosen from the normal distrubution of this column
 + sort by which columns
++ delete some columns
